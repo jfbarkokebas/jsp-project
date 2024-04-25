@@ -59,7 +59,7 @@ public class LoginController extends HttpServlet {
 
 				if (dao.validarAutenticacao(userLogin)) {
 
-					request.getSession().setAttribute("usuario", userLogin.getNome());
+					request.getSession().setAttribute("usuario", userLogin.getLogin());
 
 					if (url == null || url.equalsIgnoreCase("null")) {
 						url = "principal/principal.jsp";
