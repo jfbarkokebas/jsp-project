@@ -4,7 +4,9 @@
 <html>
 <jsp:include page="principal/components/head.jsp"></jsp:include>
 <body>
-	<h1>Erro:</h1>
-	<h3>${msg}</h3>
+	<div style="height: 100vh" class="d-flex align-items-center justify-content-center vh-100 bg-primary container-sm">
+        <h1 class="display-1 fw-bold text-white">Erro</h1>
+        <h3>${msg}</h3>
+    </div>
 </body>
 </html>

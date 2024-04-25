@@ -25,6 +25,21 @@ public class LoginController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String acao = request.getParameter("acao");
+		
+		if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("logout")) {
+			request.getSession().invalidate();
+			
+			RequestDispatcher redireciona = request.getRequestDispatcher("index.jsp");
+			redireciona.forward(request, response);
+			
+		}else {
+			//faz um get mesmo que tente um post via url.
+			doPost(request, response);
+			
+		}
+		
 
 	}
 
