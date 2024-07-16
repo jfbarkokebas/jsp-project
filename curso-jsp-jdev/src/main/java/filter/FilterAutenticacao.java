@@ -16,7 +16,9 @@ import javax.servlet.http.HttpSession;
 @WebFilter(urlPatterns = {"/principal/*"})
 public class FilterAutenticacao extends HttpFilter implements Filter {
        
-    public FilterAutenticacao() {
+	private static final long serialVersionUID = 1L;
+
+	public FilterAutenticacao() {
         super();
     }
 
@@ -35,7 +37,7 @@ public class FilterAutenticacao extends HttpFilter implements Filter {
 		
 		//validar se está logado, caso não redireciona p login:
 		if (usuarioLogado == null  && 
-				!urlParaAutenticar.equalsIgnoreCase("/principal/ServletLogin")) {/*Não está logado*/
+				!urlParaAutenticar.equalsIgnoreCase("/principal/servletlogin")) {/*Não está logado*/
 			
 			RequestDispatcher redireciona = request.getRequestDispatcher("/index.jsp?url=" + urlParaAutenticar);
 			request.setAttribute("msg", "Por favor realize o login!");

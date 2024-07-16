@@ -4,29 +4,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<jsp:include page="components/head.jsp"></jsp:include>
+<jsp:include page="head.jsp"></jsp:include>
 
   <body>
   <!-- Pre-loader start -->
   
-  <jsp:include page="components/theme-loader.jsp"></jsp:include>
+  <jsp:include page="theme-loader.jsp"></jsp:include>
   
   <!-- Pre-loader end -->
   <div id="pcoded" class="pcoded">
       <div class="pcoded-overlay-box"></div>
       <div class="pcoded-container navbar-wrapper">
           
-          <jsp:include page="components/navbar.jsp"></jsp:include>
+          <jsp:include page="navbar.jsp"></jsp:include>
 
           <div class="pcoded-main-container">
               <div class="pcoded-wrapper">
                   
-                  <jsp:include page="components/navbarmainmenu.jsp"></jsp:include>
+                  <jsp:include page="navbarmainmenu.jsp"></jsp:include>
                   
                   <div class="pcoded-content">
                       <!-- Page-header start -->
                       
-                      <jsp:include page="components/page-header.jsp"></jsp:include>
+                      <jsp:include page="page-header.jsp"></jsp:include>
                       
                       <!-- Page-header end -->
                         <div class="pcoded-inner-content">
@@ -51,7 +51,7 @@
     </div>
    
    
-<jsp:include page="components/javascriptfile.jsp"></jsp:include>
+<jsp:include page="javascriptfile.jsp"></jsp:include>
 </body>
 
 </html>
